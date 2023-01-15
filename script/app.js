@@ -11,12 +11,11 @@ for (const iterator of numberbutton) {
   });
 }
 
-clearDisplay.addEventListener("click", function () {
-  display.textContent = "";
-});
-
 function getNum(numberToAdd) {
-  if (display.textContent === 0) {
+  if (display.textContent.length < 15) {
+    if (display.textContent === "0") {
+      display.textContent = "";
+    }
     display.textContent += `${numberToAdd}`;
     return;
   } else {
@@ -24,11 +23,33 @@ function getNum(numberToAdd) {
   }
 }
 
-clearDisplay.addEventListener("click", function name(params) {
-  clear();
-});
-
-function clear() {
+clearDisplay.addEventListener("click", function () {
   display.textContent = "0";
   return;
+});
+
+function sum(a, b) {
+  return a + b;
 }
+function divisinon(a, b) {
+  return a / b;
+}
+
+function subtraction(a, b) {
+  return a / b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+const add = document.querySelector("add");
+const substract = document.querySelectorAll("substract");
+const multyply = documentation.querySelector("multyply");
+const devide = document.querySelector("devide");
+const equal = document.querySelector("equal");
+
+add.addEventListener("click", function () {
+  const screenNumber = display.textContent;
+  clearDisplay();
+});
