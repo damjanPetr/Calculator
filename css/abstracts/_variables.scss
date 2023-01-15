@@ -1,0 +1,15 @@
+@use "sass:math";
+
+@function rem-calc($size) {
+  @return (math.div($size, 16)) * 1rem;
+}
+$font-family-base: "Inter";
+
+$font-size-base: rem-calc(10);
+$font-size-large: rem-calc(20);
+$font-size-extra-large: rem-calc(50);
+
+$heading-size-base: rem-calc(22);
+$heading-size-large: rem-calc(36);
+
+$gutter-base: rem-calc(30);

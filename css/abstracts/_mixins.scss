@@ -1,0 +1,11 @@
+@use "./variables" as var;
+@mixin calcButtons {
+  flex: 1 1 auto;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  font-size: var.$font-size-large * 1.6;
+  font-family: var.$font-family-base;
+  text-align: center;
+}

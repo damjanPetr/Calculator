@@ -1,0 +1,105 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.calculator {
+  width: 30%;
+  margin: 0 auto;
+  border: 1px solid #000;
+  padding: var.$gutter-base;
+  .display {
+    text-align: right;
+    font-size: var.$font-size-extra-large;
+    border: 2px solid #0d69d9;
+    background: rgb(0, 106, 255);
+    color: rgb(74, 255, 29);
+    // text-shadow: rgba(74, 255, 29, 0.874) 0px 2px;
+    & p {
+      padding-right: 10px;
+      margin: 0;
+    }
+  }
+  .funbuttons {
+    display: flex;
+    justify-content: space-around;
+    gap: var.$gutter-base;
+    border: 1px solid #000;
+    div {
+      width: 40%;
+      padding: 10px 10px;
+      @include mix.calcButtons;
+    }
+    & div:first-child {
+      background: #7906c5ce;
+    }
+    & div:last-child {
+      background: #8b0962ae;
+    }
+  }
+  .calc-ui-num {
+    display: grid;
+    // grid-template-rows: repeat(4, fr);
+    grid-template-columns: auto 20%;
+    grid-template-areas:
+      "number3 function"
+      "number2 function"
+      "number1 function"
+      "number0 function";
+    background: rgba(128, 128, 128, 0.437);
+
+    & div {
+      border: 1px solid #000;
+    }
+    & div[class^="num"] {
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+
+      & div {
+        @include mix.calcButtons;
+      }
+    }
+
+    .function {
+      grid-area: function;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 10px;
+
+      & div {
+        flex: 1 1 auto;
+        font-family: var.$font-family-base;
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #000;
+        font-size: var.$font-size-large * 1.6;
+      }
+      & .equal {
+        flex: 1 1 30%;
+        vertical-align: center;
+      }
+    }
+    & .num13 {
+      grid-area: number1;
+    }
+    & .num46 {
+      grid-area: number2;
+    }
+    & .num79 {
+      grid-area: number3;
+    }
+    .dot {
+      grid-area: number0;
+      display: flex;
+
+      div {
+        @include mix.calcButtons;
+      }
+      & div:last-child {
+        flex: 0 1 40%;
+      }
+    }
+  }
+}

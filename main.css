@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.calculator {
+  width: 30%;
+  margin: 0 auto;
+  border: 1px solid #000;
+  padding: 1.875rem;
+}
+.calculator .display {
+  text-align: right;
+  font-size: 3.125rem;
+  border: 2px solid #0d69d9;
+  background: rgb(0, 106, 255);
+  color: rgb(74, 255, 29);
+}
+.calculator .display p {
+  padding-right: 10px;
+  margin: 0;
+}
+.calculator .funbuttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.875rem;
+  border: 1px solid #000;
+}
+.calculator .funbuttons div {
+  width: 40%;
+  padding: 10px 10px;
+  flex: 1 1 auto;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  font-size: 2rem;
+  font-family: "Inter";
+  text-align: center;
+}
+.calculator .funbuttons div:first-child {
+  background: rgba(121, 6, 197, 0.8078431373);
+}
+.calculator .funbuttons div:last-child {
+  background: rgba(139, 9, 98, 0.6823529412);
+}
+.calculator .calc-ui-num {
+  display: grid;
+  grid-template-columns: auto 20%;
+  grid-template-areas: "number3 function" "number2 function" "number1 function" "number0 function";
+  background: rgba(128, 128, 128, 0.437);
+}
+.calculator .calc-ui-num div {
+  border: 1px solid #000;
+}
+.calculator .calc-ui-num div[class^=num] {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.calculator .calc-ui-num div[class^=num] div {
+  flex: 1 1 auto;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  font-size: 2rem;
+  font-family: "Inter";
+  text-align: center;
+}
+.calculator .calc-ui-num .function {
+  grid-area: function;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+.calculator .calc-ui-num .function div {
+  flex: 1 1 auto;
+  font-family: "Inter";
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #000;
+  font-size: 2rem;
+}
+.calculator .calc-ui-num .function .equal {
+  flex: 1 1 30%;
+  vertical-align: center;
+}
+.calculator .calc-ui-num .num13 {
+  grid-area: number1;
+}
+.calculator .calc-ui-num .num46 {
+  grid-area: number2;
+}
+.calculator .calc-ui-num .num79 {
+  grid-area: number3;
+}
+.calculator .calc-ui-num .dot {
+  grid-area: number0;
+  display: flex;
+}
+.calculator .calc-ui-num .dot div {
+  flex: 1 1 auto;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  font-size: 2rem;
+  font-family: "Inter";
+  text-align: center;
+}
+.calculator .calc-ui-num .dot div:last-child {
+  flex: 0 1 40%;
+}
+
+/*# sourceMappingURL=main.css.map */
