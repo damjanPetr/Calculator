@@ -37,6 +37,12 @@ img {
   padding-right: 10px;
   margin: 0;
 }
+.calculator .displayBackup {
+  text-align: right;
+  font-size: 1.25rem;
+  border: 2px solid #6b829f;
+  background: rgb(6, 147, 55);
+}
 .calculator .funbuttons {
   display: flex;
   justify-content: space-around;
